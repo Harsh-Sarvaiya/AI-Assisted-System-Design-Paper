@@ -7,6 +7,7 @@ The project evaluates two AI-driven pipelines:
 - **Pipeline A**: Directly converts User Stories into Sequence Diagrams.
 - **Pipeline B**: Introduces an intermediate step—Use Case Scenario (UCS) generation—before converting to Sequence Diagrams.
 
+📄 **Read the full paper:** [IEEE Conference Paper](./IEEE_Conference_Template.pdf)
 
 ## 🚀 Features
 - **Automated UML Sequence Diagram Generation**
@@ -32,7 +33,7 @@ cd AI-Assisted-System-Design
 ### 2️⃣ Install Dependencies
 This project runs on Python 3 and requires the following libraries:
 ```bash
-pip install openai plantuml requests pandas
+pip install openai plantuml requests pandas python-docx python-dotenv
 ```
 
 ### 3️⃣ Set Up OpenAI API Key
@@ -40,21 +41,27 @@ You'll need an OpenAI API key to generate sequence diagrams:
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
+Or use a `.env` file:
+```python
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+```
 
 ## 🔄 Usage
 
 ### Generate a Sequence Diagram (Pipeline A - Direct Approach)
 ```bash
-python generate_sequence_diagram.py --pipeline A --input user_stories.csv
+python pipeline_A.py --input user_stories.csv
 ```
 
 ### Generate a Sequence Diagram (Pipeline B - Use Case Scenario Approach)
 ```bash
-python generate_sequence_diagram.py --pipeline B --input user_stories.csv
+python pipeline_B.py --input user_stories.csv
 ```
 
 ### View Generated UML Diagrams
-All diagrams will be saved as `.puml` and rendered as `.png` in the `output/` directory.
+All diagrams will be saved as `.puml` and rendered as `.png` in the `plantuml_sequences/` directory.
 
 ## 📚 Dataset
 The user stories dataset is sourced from **Jahan et al. (2023)** and includes real-world software development requirements from **library and restaurant management systems**.
@@ -76,7 +83,6 @@ If you use this work in your research, please cite:
 @inproceedings{sarvaiya2024ai,
   author    = {Harsh Sarvaiya, Munima Jahan},
   title     = {AI-Assisted System Design: Improving Sequence Diagrams Through Use Case Scenarios},
-  booktitle = {IEEE Conference 2024},
   year      = {2024},
 }
 ```
