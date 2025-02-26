@@ -83,7 +83,7 @@ If you use this work in your research, please cite:
 @inproceedings{sarvaiya2024ai,
   author    = {Harsh Sarvaiya, Munima Jahan},
   title     = {AI-Assisted System Design: Improving Sequence Diagrams Through Use Case Scenarios},
-  year      = {2024},
+  year      = {2025},
 }
 ```
 
