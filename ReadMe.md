@@ -7,7 +7,7 @@ The project evaluates two AI-driven pipelines:
 - **Pipeline A**: Directly converts User Stories into Sequence Diagrams.
 - **Pipeline B**: Introduces an intermediate step—Use Case Scenario (UCS) generation—before converting to Sequence Diagrams.
 
-📄 **Read the full paper:** [IEEE Conference Paper](./AI-Assisted System Design Paper.pdf/)
+📄 **Read the full paper:** [IEEE Conference Paper](./AI-Assisted-System-Design-Paper.pdf)
 
 ## 🚀 Features
 - **Automated UML Sequence Diagram Generation**
